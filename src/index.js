@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Home from "./Home";
+import "./index.css";
+import Navbar from "./Navbar";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+document.body.classList.add("overflow-hidden");
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div>
+    <Navbar />
+    <div className="flex justify-center mt-40 h-screen">
+    <div className="bg-gray-100 h-1/2 w-80 md:w-96 lg:w-120 rounded-lg">
+        <Home />
+      </div>
+    </div>
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
